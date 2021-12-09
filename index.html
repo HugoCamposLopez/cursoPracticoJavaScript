@@ -8,6 +8,62 @@
     <title>Figuras Geométricas</title>
 </head>
 <body>
-    <h1>Figuras Geométricas</h1>
+    <header>
+        <h1>Figuras Geométricas del curso practico de JS</h1>
+    </header>
+    <section>
+        <h2>Calcula el area y perémetro de un cuadrado</h2>
+        <form>
+            <label for="InputCuadrado">
+                Escribe cuanto mide cada de tu cuadrado:
+            </label>
+            <input id="InputCuadrado" type="number" />
+            
+            <button type="button" onclick="calcularPerimetroCuadrado()">
+                Calcular perimetro
+            </button>
+            <button type="button"onclick="calcularAreaCuadrado()">
+                Calcular area
+            </button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Calcula el área y perimetro del triángulo</h2>
+        <form>
+            <label for="ladoA">
+                Escribe cuanto mide el lado A del triángulo
+            </label>
+            <input placeholder="Lado A" id="ladoA" type="number"/><br>
+
+            <label for="ladoB">
+                Escribe cuanto mide el lado B del triángulo
+            </label>
+            <input placeholder="Lado B" id="ladoB" type="number"/><br>
+
+            <label for="base">
+                Escribe cuanto mide la BASE del triángulo  
+            </label>
+            <input placeholder="Base" id="base" type="number"/><br>
+
+            <label for="base">
+                Escribe la altura del triangulo
+            </label>
+            <input placeholder="altura" id="altura" type="number"/> <br>
+
+            <button type="button" onclick="calcularPerimetroTriangulo()">
+                Calcular perimetro
+            </button>
+            <button type="button" onclick="calcularAreaTriangulo()">Calcular area</button>
+        </form>
+    </section>
+
+    <section>
+        <h1>Calcula el área y perimetro de un circulo</h1>
+        <label>Escribe el radio del circulo</label>
+        <input placeholder="Radio" type="number" id="radio"/><br>
+        <button>Calcular area</button>
+        <button>Calcular perimetro</button>
+    </section>
 </body>
 </html>

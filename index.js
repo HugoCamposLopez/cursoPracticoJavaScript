@@ -20,17 +20,10 @@ const ladoTriangulo2 = 6
 const baseTriangulo = 4
  
 
-/* console.log("Los lados del triangulo miden " 
-+ ladoTriangulo 
-+ "cm, " 
-+ ladoTriangulo2 
-+ "cm y " 
-+baseTriangulo + " cm" )
-
-const alturaTriangulo = 5.5
-console.log("La base del triangulo es: "+ alturaTriangulo) */
-
 function perimetroTriangulo (lado, lado2, base){
+    lado = parseInt(lado)
+    lado2 = parseInt(lado2)
+    base = parseInt(base)
     return lado + lado2 + base
 } 
 console.log("El perimetro del triangulo es: " + perimetroTriangulo)
@@ -48,6 +41,7 @@ console.group("Circulo");
 /* const radioCirculo = 4
 console.log("El radio del circulo es: " + radioCirculo +" cm") */
 //Diametro
+
 function diametroCirculo(radio){
    return radio * 2
 } 
@@ -69,3 +63,43 @@ function areaCirculo(radio){
     return PI * (radio * radio)
 } 
 console.log("El area del circulo es: " + areaCirculo + " cm")
+
+
+//Aqui interactuamos con el HTML
+
+function calcularPerimetroCuadrado(){
+   const input = document.getElementById("InputCuadrado")
+   const value = input.value
+   const perimetro = perimetroCuadrado(value)
+   alert(perimetro)
+}
+
+function calcularAreaCuadrado(){
+    const input = document.getElementById("InputCuadrado")
+    const value = input.value
+    const area = areaCuadrado(value)
+    alert(area)
+
+}
+
+function calcularPerimetroTriangulo(){
+    const input = document.getElementById("ladoA")
+    const input2 = document.getElementById("ladoB")
+    const input3 = document.getElementById("base")
+
+    const value = input.value
+    const value2 = input2.value
+    const value3 = input3.value
+
+    const perimetro = perimetroTriangulo(value,value2,value3)
+    alert(perimetro)
+}
+
+function calcularAreaTriangulo(){
+    const input = document.getElementById("base")
+    const input2 = document.getElementById("altura")
+    const base = input.value
+    const altura = input2.value
+    const area = areaTriangulo(base,altura)
+    alert(area)
+}
